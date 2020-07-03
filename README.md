@@ -28,18 +28,9 @@ This Repo contain the project source code files of the
 
 ## Attributes of the results
 
-1. ```lyric_id``` - unique lyric identifier (integer)
-2. ```title``` - song title containg both Enlish and Sinhala 
-3. ```title_sinhala``` - song title in Sinhala (Unicode) 
-4. ```title_english``` - song title in English
-5. ```artist``` - song artist name
-6. ```music``` - music composer's name
-7. ```melody``` - author's name of the melody
-8. ```lyrics_author``` - authour's name of the lyrics
-9. ```image_url``` - url for song cover image
-10. ```video_url``` - Youtube video url
-11. ```youtube_video_id``` - Youtube video id
-12. ```lyrics``` - song lyrics in Sinhala Unicode
+For detaied descriptions, Please refer the `README.md` file in project folders
+* --Sinhala song lyrics scraping tool
+* --ElasticSearch
 
 
 ## Version
