@@ -6,11 +6,58 @@ import queryGenerator as qG
 
 es = Elasticsearch(HOST="http://localhost",PORT=9200)
 
-
+configs = {
+    "settings": {
+        "index": {
+            "number_of_shards": 1,
+            "number_of_replicas": 1
+        },
+        "analysis": {
+            "analyzer": {
+                "sinhala-ngram": {
+                    "type": "custom",
+                    "tokenizer": "icu_tokenizer",
+                    "char_filter": ["punc_char_filter"],
+                    "token_filter": [
+                        "edge_n_gram_filter"
+                    ]
+                },
+                "sinhala": {
+                    "type": "custom",
+                    "tokenizer": "icu_tokenizer",
+                    "char_filter": ["punc_char_filter"]
+                },
+                "english":{
+                    "type": "custom",
+                    "tokenizer": "classic",
+                    "char_filter": ["punc_char_filter"],
+                },
+                "sinhala-search": {
+                    "type": "custom",
+                    "tokenizer": "standard",
+                    "char_filter": ["punc_char_filter"]
+                },
+            },
+            "char_filter": {
+                "punc_char_filter": {
+                    "type": "mapping",
+                    "mappings": [".=>", "|=>", "-=>", "_=>", "'=>", "/=>", ",=>", "?=>"]
+                }
+            },
+            "token_filter": {
+                "edge_n_gram_filter": {
+                    "type": "edge_ngram",
+                    "min_gram": "2",
+                    "max_gram": "20",
+                    "side": "front"
+                }
+            }
+        }
+    }
 
 
 def createIndex(index):
-    return es.indices.create(index=index,ignore=400)
+    return es.indices.create(index=index,ignore=400, body=configs)
 
 def deleteIndex(index):
     return es.indices.delete(index=index)
