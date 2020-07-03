@@ -29,9 +29,9 @@ Use ```getSongData(arg1,arg2,arg3)``` method to scrape the website.
 
 This method requires three arguments
 
-arg1 - Destination file name 
-arg2 - Starting year for scraping
-arg3- Finishing year for scraping
+1. arg1 - Destination file name 
+2. arg2 - Starting year for scraping
+3. arg3- Finishing year for scraping
 
 Example
 ```getSongData('Sinhala_Unicode_Song_Lyrics_Corpus.csv',2020,2009)```
