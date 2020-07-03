@@ -53,7 +53,81 @@ configs = {
                 }
             }
         }
+    },
+    "mappings": {
+        "properties": {
+            "lyric_id": {
+                "type": "long"
+            },
+            "title_sinhala": {
+                "type": "text",
+                "fields": {
+                        "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                        },
+                },
+                "analyzer": "sinhala-ngram",
+                "search_analyzer": "sinhala-search"
+            },
+            "artist": {
+                "type": "text",
+                "fields": {
+                        "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                        },
+                },
+                "analyzer": "sinhala-ngram",
+                "search_analyzer": "sinhala-search"
+            },
+            "music": {
+                "type": "text",
+                "fields": {
+                        "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                        },
+                },
+                "analyzer": "sinhala-ngram",
+                "search_analyzer": "sinhala-search"
+            },
+            "melody": {
+                "type": "text",
+                "fields": {
+                        "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                        },
+                },
+                "analyzer": "sinhala-ngram",
+                "search_analyzer": "sinhala-search"
+            },
+            "lyrics_author": {
+                "type": "text",
+                "fields": {
+                        "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                        },
+                },
+                "analyzer": "sinhala-ngram",
+                "search_analyzer": "sinhala-search"
+            },
+            "lyrics": {
+                "type": "text",
+                "fields": {
+                        "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                        },
+                },
+                "analyzer": "sinhala-ngram",
+                "search_analyzer": "sinhala-search"
+            }
+        }
     }
+}
 
 
 def createIndex(index):
