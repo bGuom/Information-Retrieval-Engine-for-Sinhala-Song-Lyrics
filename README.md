@@ -29,8 +29,8 @@ This Repo contain the project source code files of the
 ## Details
 
 For detaied descriptions, Please refer the `README.md` file in project folders
-* --Sinhala song lyrics scraping tool
-* --ElasticSearch
+* [Sinhala song lyrics scraping tool](https://github.com/bGuom/Information-Retrieval-Engine-for-Sinhala-Song-Lyrics/tree/master/Sinhala%20song%20lyrics%20scraping%20tool)
+* [ElasticSearch](https://github.com/bGuom/Information-Retrieval-Engine-for-Sinhala-Song-Lyrics/tree/master/ElasticSearch)
 
 
 ## Version
