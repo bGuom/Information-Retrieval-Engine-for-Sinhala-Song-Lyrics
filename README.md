@@ -26,7 +26,7 @@ This Repo contain the project source code files of the
 * Text classification
 * Boosting
 
-## Attributes of the results
+## Details
 
 For detaied descriptions, Please refer the `README.md` file in project folders
 * --Sinhala song lyrics scraping tool
